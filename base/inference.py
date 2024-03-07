@@ -1,4 +1,5 @@
 import os
+import pickle as pickle
 import sys
 
 import DataLoader
@@ -28,3 +29,12 @@ def inference(model, tokenized_sent, device):
     output_prob.append(prob)
 
   return np.concatenate(output_pred).tolist(), np.concatenate(output_prob, axis=0).tolist()
+
+def num_to_label(label):
+  origin_label = []
+  with open('dict_num_to_label.pkl', 'rb') as f:
+    dict_num_to_label = pickle.load(f)
+  for v in label:
+    origin_label.append(dict_num_to_label[v])
+
+  return origin_label
