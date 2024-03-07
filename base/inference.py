@@ -38,3 +38,12 @@ def num_to_label(label):
     origin_label.append(dict_num_to_label[v])
 
   return origin_label
+
+def load_test_dataset(dataset_dir, tokenizer, model_type):
+  if model_type == 'base':
+    test_dataset = load_data(dataset_dir)
+    test_label = list(map(int,test_dataset['label'].values))
+
+    tokenized_test = tokenized_dataset(test_dataset, tokenizer)
+    return test_dataset['id'], tokenized_test, test_label
+
