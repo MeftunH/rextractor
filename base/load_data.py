@@ -33,3 +33,18 @@ class RE_Dataset(torch.utils.data.Dataset):
 
     def __len__(self):
       return len(self.labels)
+
+    def preprocessing_dataset(dataset):
+      subject_words = []
+      object_words = []
+
+      for sub_entity, obj_entity in zip(dataset['subject_entity'], dataset['object_entity']):
+        sub_word = eval(sub_entity)['word']
+        obj_word = eval(obj_entity)['word']
+
+        subject_words.append(sub_word)
+        object_words.append(obj_word)
+
+      out_dataset = pd.DataFrame({'id': dataset['id'], 'sentence': dataset['sentence'], 'subject_entity': subject_words,
+                                  'object_entity': object_words, 'label': dataset['label'], })
+      return out_dataset
