@@ -103,3 +103,11 @@ def main(CFG):
   output.to_csv('./prediction/submission.csv', index=False)
 
   print('---- Finish! ----')
+
+  if __name__ == '__main__':
+      seed_everything()
+
+      with open('./../module/config.yaml') as f:
+          CFG = yaml.safe_load(f)
+
+      main(CFG)
