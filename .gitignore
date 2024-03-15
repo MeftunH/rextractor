@@ -40,9 +40,9 @@ dataset/
 # since they will be recreated, and may cause churn.  Uncomment if using
 # auto-import.
 # .idea/artifacts
-# .idea/compiler.xml
-# .idea/jarRepositories.xml
-# .idea/modules.xml
+# .idea/compiler.xml.py
+# .idea/jarRepositories.xml.py
+# .idea/modules.xml.py
 # .idea/*.iml
 # .idea/modules
 # *.iml
@@ -119,9 +119,9 @@ fabric.properties
 # since they will be recreated, and may cause churn.  Uncomment if using
 # auto-import.
 # .idea/artifacts
-# .idea/compiler.xml
-# .idea/jarRepositories.xml
-# .idea/modules.xml
+# .idea/compiler.xml.py
+# .idea/jarRepositories.xml.py
+# .idea/modules.xml.py
 # .idea/*.iml
 # .idea/modules
 # *.iml
@@ -428,9 +428,9 @@ cython_debug/
 # since they will be recreated, and may cause churn.  Uncomment if using
 # auto-import.
 # .idea/artifacts
-# .idea/compiler.xml
-# .idea/jarRepositories.xml
-# .idea/modules.xml
+# .idea/compiler.xml.py
+# .idea/jarRepositories.xml.py
+# .idea/modules.xml.py
 # .idea/*.iml
 # .idea/modules
 # *.iml
@@ -507,9 +507,9 @@ fabric.properties
 # since they will be recreated, and may cause churn.  Uncomment if using
 # auto-import.
 # .idea/artifacts
-# .idea/compiler.xml
-# .idea/jarRepositories.xml
-# .idea/modules.xml
+# .idea/compiler.xml.py
+# .idea/jarRepositories.xml.py
+# .idea/modules.xml.py
 # .idea/*.iml
 # .idea/modules
 # *.iml
@@ -586,9 +586,9 @@ fabric.properties
 # since they will be recreated, and may cause churn.  Uncomment if using
 # auto-import.
 # .idea/artifacts
-# .idea/compiler.xml
-# .idea/jarRepositories.xml
-# .idea/modules.xml
+# .idea/compiler.xml.py
+# .idea/jarRepositories.xml.py
+# .idea/modules.xml.py
 # .idea/*.iml
 # .idea/modules
 # *.iml
@@ -665,9 +665,9 @@ fabric.properties
 # since they will be recreated, and may cause churn.  Uncomment if using
 # auto-import.
 # .idea/artifacts
-# .idea/compiler.xml
-# .idea/jarRepositories.xml
-# .idea/modules.xml
+# .idea/compiler.xml.py
+# .idea/jarRepositories.xml.py
+# .idea/modules.xml.py
 # .idea/*.iml
 # .idea/modules
 # *.iml

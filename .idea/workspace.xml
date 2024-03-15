@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="57092dd3-16ac-485c-bc7d-bea43ea0c1df" name="Changes" comment="Init Repository">
-      <change beforePath="$PROJECT_DIR$/../rextractor/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../rextractor/.gitignore" afterDir="false" />
-    </list>
+    <list default="true" id="57092dd3-16ac-485c-bc7d-bea43ea0c1df" name="Changes" comment="Add idea to ignore" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,6 +49,7 @@
     "node.js.detected.package.stylelint": "true",
     "node.js.selected.package.stylelint": "",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -118,7 +117,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1707980210435</updated>
-      <workItem from="1707980224678" duration="218000" />
+      <workItem from="1707980224678" duration="276000" />
     </task>
     <task id="LOCAL-00001" summary="Init Repository">
       <option name="closed" value="true" />
@@ -136,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707980413656</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add idea to ignore">
+      <option name="closed" value="true" />
+      <created>1707980457150</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707980457150</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,7 +152,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Init Repository" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init Repository" />
+    <MESSAGE value="Add idea to ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add idea to ignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
