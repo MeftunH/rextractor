@@ -49,3 +49,18 @@ def klue_re_auprc(probs, labels):
         precision, recall, _ = sklearn.metrics.precision_recall_curve(targets_c, preds_c)
         score[c] = sklearn.metrics.auc(recall, precision)
     return np.average(score) * 100.0
+
+def compute_metrics(pred):
+  labels = pred.label_ids
+  preds = pred.predictions.argmax(-1)
+  probs = pred.predictions
+
+  f1 = klue_re_micro_f1(preds, labels)
+  auprc = klue_re_auprc(probs, labels)
+  acc = accuracy_score(labels, preds)
+
+  return {
+      'micro f1 score': f1,
+      'auprc' : auprc,
+      'accuracy': acc,
+  }
