@@ -72,3 +72,29 @@ def label_to_num(label):
     num_label.append(dict_label_to_num[v])
 
   return num_label
+
+def train():
+  with open('./../module/config.yaml') as f:
+    CFG = yaml.safe_load(f)
+
+  MODEL_NAME = CFG['MODEL_NAME']
+  tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+  tokenizer = add_token(tokenizer, CFG['MODEL_TYPE'])
+
+  if CFG['RATIO'] == 0.0:
+    train_dataset = load_data(CFG['TRAIN_PATH'], CFG['MODEL_TYPE'])
+    dev_dataset = load_data(CFG['DEV_PATH'], CFG['MODEL_TYPE'])
+  else:
+    train_val_split(CFG['RATIO'])
+    train_dataset = load_data(CFG['SPLIT_TRAIN_PATH'], CFG['MODEL_TYPE'])
+    dev_dataset = load_data(CFG['SPLIT_DEV_PATH'], CFG['MODEL_TYPE'])
+
+  train_label = label_to_num(train_dataset['label'].values)
+  dev_label = label_to_num(dev_dataset['label'].values)
+
+  device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+
+  print(device)
+  # setting model hyperparameter
+  model_config = AutoConfig.from_pretrained(MODEL_NAME)
+  model_config.num_labels = 30
