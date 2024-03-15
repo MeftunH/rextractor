@@ -84,3 +84,17 @@ def train():
   if CFG['RATIO'] == 0.0:
     train_dataset = load_data(CFG['TRAIN_PATH'], CFG['MODEL_TYPE'])
     dev_dataset = load_data(CFG['DEV_PATH'], CFG['MODEL_TYPE'])
+  else:
+    train_val_split(CFG['RATIO'])
+    train_dataset = load_data(CFG['SPLIT_TRAIN_PATH'], CFG['MODEL_TYPE'])
+    dev_dataset = load_data(CFG['SPLIT_DEV_PATH'], CFG['MODEL_TYPE'])
+
+  train_label = label_to_num(train_dataset['label'].values)
+  dev_label = label_to_num(dev_dataset['label'].values)
+
+  device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+
+  print(device)
+  # setting model hyperparameter
+  model_config = AutoConfig.from_pretrained(MODEL_NAME)
+  model_config.num_labels = 30
