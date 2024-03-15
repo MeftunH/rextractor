@@ -72,3 +72,15 @@ def label_to_num(label):
     num_label.append(dict_label_to_num[v])
 
   return num_label
+
+def train():
+  with open('./../module/config.yaml') as f:
+    CFG = yaml.safe_load(f)
+
+  MODEL_NAME = CFG['MODEL_NAME']
+  tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+  tokenizer = add_token(tokenizer, CFG['MODEL_TYPE'])
+
+  if CFG['RATIO'] == 0.0:
+    train_dataset = load_data(CFG['TRAIN_PATH'], CFG['MODEL_TYPE'])
+    dev_dataset = load_data(CFG['DEV_PATH'], CFG['MODEL_TYPE'])
